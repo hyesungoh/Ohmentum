@@ -1,0 +1,117 @@
+
+body {
+  background-color: #636e72;
+}
+
+input {
+  all: unset;
+}
+
+.container {
+  margin-left: 100px;
+  margin-top: 80px;
+}
+
+.form,
+.name {
+  display: none;
+}
+
+.title {
+  all: unset;
+  font-size: 150px;
+  color: #dfe6e9;
+  text-shadow: 0px 0px 10px #2d3436;
+}
+
+.content {
+  margin-left: 30px;
+}
+
+.name {
+  all: unset;
+  font-size: 40px;
+  color: #dfe6e9;
+  margin-top: -20px;
+  text-shadow: 0px 0px 10px #2d3436;
+}
+
+.form > input {
+  margin-top: -20px;
+  padding-top: 5px;
+  padding-left: 10px;
+  border: none;
+  border-radius: 8px;
+  text-shadow: 0px 0px 10px #2d3436;
+
+  box-shadow: -10px 10px 6px #2d3436;
+  width: 280px;
+  height: 60px;
+  font-size: 30px;
+  color: #dfe6e9;
+}
+.form > input::placeholder {
+  color: #dfe6e9;
+}
+
+.toDoForm > input {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  padding-top: 5px;
+  padding-left: 10px;
+  border: none;
+  border-radius: 8px;
+  text-shadow: 0px 0px 6px #2d3436;
+
+  box-shadow: -10px 10px 8px #2d3436;
+  width: 240px;
+  height: 40px;
+  font-size: 20px;
+  color: #dfe6e9;
+}
+
+.toDoForm > input::placeholder {
+  color: #dfe6e9;
+}
+
+ul {
+  all: unset;
+}
+
+li {
+  display: flex;
+  margin-top: 10px;
+}
+
+li > span {
+    font-size: 20px;
+    color: #dfe6e9;
+    text-shadow: 0px 0px 6px #2d3436;
+}
+
+
+
+
+.showing {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+
+}
+
+.bgImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  animation: fadeIn 1.2s ease-in-out;
+}
