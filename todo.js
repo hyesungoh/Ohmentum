@@ -38,12 +38,6 @@ function deleteToDo(event){
   setTimeout(deleteAfterAni, 1400, btn);
 }
 
-
-
-function handleAnimationEnd(){
-  console.log("fukc");
-}
-
 function saveToDos(){
   // JSON.stringify는 모든 객체들을 문자열 형태로 만들어줌
   localStorage.setItem(TODOS_LS, JSON.stringify(toDos));
