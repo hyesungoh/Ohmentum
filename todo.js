@@ -2,12 +2,11 @@ const toDoForm = document.querySelector(".js-toDoForm"),
       toDoInput = toDoForm.querySelector("input"),
       toDoList = document.querySelector(".js-toDoList");
 
-let toDos = []
+let toDos = [];
 
-const TODOS_LS = "toDos"
+const TODOS_LS = "toDos";
 
-function deleteToDo(event){
-  const btn = event.target;
+function deleteAfterAni(btn){
   const li = btn.parentNode;
   toDoList.removeChild(li);
 
@@ -17,7 +16,32 @@ function deleteToDo(event){
     return toDo.id !== parseInt(li.id);
   });
   toDos = cleanToDos;
+
   saveToDos();
+}
+
+function deleteToDo(event){
+  const btn = event.target;
+  const li = btn.parentNode;
+
+  li.animate([
+    {opacity: 1,
+     easing: 'ease-in-out'},
+    {opacity: 0,
+     easing: 'ease-in-out'}
+  ], {
+    duration: 1500,
+    iteration: 1
+  });
+
+  // complete, then 을 이용해도 안돼서 setTimeout으로 설정
+  setTimeout(deleteAfterAni, 1400, btn);
+}
+
+
+
+function handleAnimationEnd(){
+  console.log("fukc");
 }
 
 function saveToDos(){
@@ -38,6 +62,15 @@ function paintToDo(text) {
   li.appendChild(span);
   li.id = newId;
   toDoList.appendChild(li);
+  li.animate([
+    {opacity: 0,
+     easing: 'ease-in-out'},
+    {opacity: 1,
+     easing: 'ease-in-out'}
+  ], {
+    duration: 1500,
+    iteration: 1
+  });
 
   toDoObj = {
     text: text,
