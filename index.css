@@ -1,6 +1,10 @@
 
+
 body {
+  font-family: 'Ubuntu', sans-serif;
   background-color: #636e72;
+  display: grid;
+  grid-template-columns: 2fr 50px;
 }
 
 input {
@@ -8,8 +12,17 @@ input {
 }
 
 .container {
+  grid-row: 1;
+  grid-column: 1 / 3;
   margin-left: 100px;
-  margin-top: 80px;
+  margin-top: 60px;
+}
+
+.cont_weather {
+  grid-row: 1;
+  grid-column: 3;
+  margin-right: 10px;
+  margin-top: 10px;
 }
 
 .form,
@@ -32,7 +45,7 @@ input {
   all: unset;
   font-size: 40px;
   color: #dfe6e9;
-  margin-top: -20px;
+  margin-top: 20px;
   text-shadow: 0px 0px 10px #2d3436;
 }
 
@@ -79,17 +92,49 @@ ul {
 }
 
 li {
-  display: flex;
+  all: unset;
+  display: block;
   margin-top: 10px;
 }
 
 li > span {
-    font-size: 20px;
-    color: #dfe6e9;
-    text-shadow: 0px 0px 6px #2d3436;
+  margin-left: 20px;
+  font-size: 20px;
+  color: #dfe6e9;
+  text-shadow: 0px 0px 6px #2d3436;
 }
 
+li > span:hover {
+  color: #00b894;
+  transition: color .5s;
+}
 
+li > button {
+  all: unset;
+  padding: 5px;
+  color: #dfe6e9;
+  text-shadow: 0px 0px 6px #2d3436;
+  cursor: pointer;
+}
+
+li > button:hover {
+  color: #d63031;
+  transition: color .5s;
+}
+
+.weather_info {
+  background-color: #dfe6e9;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.weather {
+  font-size: 20px;
+}
+
+.place {
+  font-size: 12px;
+}
 
 
 .showing {
