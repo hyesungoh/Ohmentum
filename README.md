@@ -5,7 +5,9 @@
 
 ---
 ### 개발 사항
-##### 시계 애니메이션
+#### 시계 애니메이션
+![e1](https://user-images.githubusercontent.com/26461307/98265001-deb29600-1fcb-11eb-9006-a679a91c061a.gif)
+
 - 기존 시계에 1초마다 적용되는 keyframs 애니메이션 적용은 시, 분, 초 모두 적용 됨
 - html 구조와 함께 js를 이용하여 초와 분이 0일 때 상위 시간을 get하는 함수 호출, innerHTMl 호출 후 `animate` 사용
 ```js
@@ -38,7 +40,10 @@ function init() {
 }
 ```
 
+
 #### To do 애니메이션
+
+![e2](https://user-images.githubusercontent.com/26461307/98265035-ea05c180-1fcb-11eb-99cd-1ea69b212d41.gif)
 - createElement 후 iteration을 1로 설정하여 적용
 ```js
 const li = document.createElement("li");
