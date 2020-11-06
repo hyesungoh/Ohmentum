@@ -1,3 +1,4 @@
+const info = document.querySelector(".weather_info");
 const weather = document.querySelector(".js-weather");
 const dong = document.querySelector(".js-place");
 
@@ -15,7 +16,16 @@ function getWeather(lat, lon){
     const place = json.name;
     weather.innerText = `${temperature}c`;
     dong.innerText = `at ${place}`;
+  }).then(function(){
+    info.classList.add("showing");
 
+    info.animate([
+      {opacity: 0},
+      {opacity: 1}
+    ], {
+      duration: 1500,
+      iteration: 1
+    });
   });
 }
 

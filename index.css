@@ -123,6 +123,7 @@ li > button:hover {
 }
 
 .weather_info {
+  display: none;
   background-color: #dfe6e9;
   padding: 10px;
   border-radius: 10px;
