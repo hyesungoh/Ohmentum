@@ -85,6 +85,30 @@ function deleteToDo(event){
   setTimeout(deleteAfterAni, 1400, btn);
 }
 ```
+#### 사용자 위치 및 날씨 로딩 후
+- fetch를 이용하여 api 호출 후 then을 사용하여 animate 사용
+
+- 초기 display 속성을 none으로 설정 후 display 속성이 있는 class를 추가하여 보이게 함
+
+```js
+fetch(
+  `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`
+).then(function(response){
+  return response.json();
+}).then(function(json){
+  ... something innerText
+}).then(function(){
+  info.classList.add("showing");
+
+  info.animate([
+    {opacity: 0},
+    {opacity: 1}
+  ], {
+    duration: 1500,
+    iteration: 1
+  });
+});
+```
 
 ---
 ### 추가하고 싶은 사항
@@ -99,5 +123,5 @@ function deleteToDo(event){
   - 이름 입력시
   - ~~할 일 작성시~~
   - ~~할 일 삭제시~~
-  - 날씨 로딩 후
+  - ~~날씨 로딩 후~~
 - 메모장 modal 추가하기?
