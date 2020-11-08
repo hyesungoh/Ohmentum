@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <title>ohmentum</title>
     <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="modal.css" />
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
 
   </head>
@@ -34,12 +35,25 @@
         </ul>
       </div>
     </div>
+    
 
     <div class="cont_weather">
       <div class="weather_info">
       <span class="js-weather weather"></span>
       <span class="js-place place"></span>
-      <div>
+      </div>
+    </div>
+
+
+    <div class="modal_button">
+      <button>Open Memo</button>
+    </div>
+
+    <div class="modal">
+      <div class="modal_content">
+        <textarea  cols="30" rows="10"></textarea>
+        <button>CLOSE</button>
+      </div>
     </div>
 
     <script src="clock.js"></script>
@@ -47,6 +61,7 @@
     <script src="todo.js"></script>
     <script src="bg.js"></script>
     <script src="weather.js"></script>
+    <script src="modal.js"></script>
   </body>
 
 </html>

@@ -1,0 +1,58 @@
+button {
+    all: unset;
+    color: white;
+    background-color: rgba(253, 203, 110,1.0);
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.modal_button {
+    position: absolute;
+    margin-left: 90%;
+    margin-top: 50%;
+  }
+
+
+.modal {
+    position: fixed;
+    top: 20%;
+    left: 100%;
+
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.modal_content {
+    background-color: rgba(255, 234, 167, 0.5);
+    padding: 10px 10px;
+    position: relative;
+    width: 300px;
+    height: 500px;
+    right: 0px;
+
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    text-align: center;
+    align-items: center;
+    border-radius: 10px;
+    transition: right 1s ease-in-out;
+}
+
+.modal_content > textarea {
+    all: unset;
+    
+    margin-top: 10px;
+    width: 100%;
+    height: 85%;
+}
+
+.modal_content > button {
+    margin-top: 10px;
+}
+
+.hidden {
+    display: none;
+}
