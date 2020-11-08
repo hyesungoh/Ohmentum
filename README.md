@@ -114,6 +114,50 @@ fetch(
 ![ezgif com-gif-maker](https://user-images.githubusercontent.com/26461307/98461583-a50ea480-21f0-11eb-86be-25b57d4ecd1a.gif)
 - Animate duration 후 setTimeout을 이용
 
+#### Memo Modal
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/26461307/98474260-a6fc5600-2238-11eb-9e40-b404f5b55b78.gif)
+- Modal의 style을 수정하여 transition 이용
+```js
+const HIDDEN_PER = "0%";
+const SHOW_PER = "110%";
+
+function handleCloseModal() {
+    modalContent.style.right = HIDDEN_PER;
+}
+
+function handleOpenModal() {
+    modalContent.style.right = SHOW_PER;
+    closeBtn.addEventListener("click", handleCloseModal);
+}
+
+function init(){
+    openBtn.addEventListener("click", handleOpenModal);
+}
+
+init();
+```
+- modal(부모)를 `fixed`와 `flex`로, modal_content(자식)을 `relative`로 설정
+```css
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    /* 오른쪽 중간에 두기 위함 */
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.modal_content {
+    background-color: rgba(255, 234, 167, 0.5);
+    padding: 10px 10px;
+    position: relative;
+}
+```
+
+- css는 [nomadcoders](https://youtu.be/V08wXKHF_Xw) 참고
+
 ---
 ### 추가하고 싶은 사항
 - Css로 디자인하기
@@ -128,4 +172,8 @@ fetch(
   - ~~할 일 작성시~~
   - ~~할 일 삭제시~~
   - ~~날씨 로딩 후~~
-- 메모장 modal 추가하기?
+- 메모장 modal 추가하기
+  - ~~modal 추가~~
+  - ~~modal transition 사용~~
+  - textarea 값 LS 저장하기
+- 배경화면 슬라이더 추가
