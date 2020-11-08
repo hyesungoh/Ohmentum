@@ -5,6 +5,7 @@ const toDoForm = document.querySelector(".js-toDoForm"),
 let toDos = [];
 
 const TODOS_LS = "toDos";
+const ANI_TIME = 700;
 
 function deleteAfterAni(btn){
   const li = btn.parentNode;
@@ -30,12 +31,12 @@ function deleteToDo(event){
     {opacity: 0,
      easing: 'ease-in-out'}
   ], {
-    duration: 1500,
+    duration: ANI_TIME,
     iteration: 1
   });
 
   // complete, then 을 이용해도 안돼서 setTimeout으로 설정
-  setTimeout(deleteAfterAni, 1400, btn);
+  setTimeout(deleteAfterAni, ANI_TIME, btn);
 }
 
 function saveToDos(){
@@ -62,7 +63,7 @@ function paintToDo(text) {
     {opacity: 1,
      easing: 'ease-in-out'}
   ], {
-    duration: 1500,
+    duration: ANI_TIME,
     iteration: 1
   });
 
