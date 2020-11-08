@@ -11,7 +11,7 @@ const USER_LS = "currentUser",
 function handlerSubmit(event){
   event.preventDefault();
   const currentValue = input.value;
-  paintName(currentValue);
+  removeForm(currentValue);
   saveName(currentValue);
 }
 
@@ -21,10 +21,29 @@ function askName() {
   form.addEventListener("submit", handlerSubmit);
 }
 
+function removeForm(text){
+  form.animate([
+    {opacity: 1},
+    {opacity: 0}
+  ], {
+    duration: 700,
+    iteration: 1
+  });
+
+  setTimeout(paintName, 700, text);
+}
+
 function paintName(text){
   form.classList.remove(SHOWING_CN);
   name.classList.add(SHOWING_CN);
   name.innerText = `Hello ${text}`;
+  name.animate([
+    {opacity: 0},
+    {opacity: 1}
+  ], {
+    duration: 700,
+    iteration: 1
+  });
 }
 
 function saveName(text){
