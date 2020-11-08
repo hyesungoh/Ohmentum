@@ -110,6 +110,10 @@ fetch(
 });
 ```
 
+#### 이름 입력 시
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/26461307/98461583-a50ea480-21f0-11eb-86be-25b57d4ecd1a.gif)
+- Animate duration 후 setTimeout을 이용
+
 ---
 ### 추가하고 싶은 사항
 - Css로 디자인하기
