@@ -158,6 +158,21 @@ init();
 
 - css는 [nomadcoders](https://youtu.be/V08wXKHF_Xw) 참고
 
+- Textarea Enter시 locaStorage 저장
+```js
+function handleTextSubmit(event){
+    if (event.keyCode == 13) {
+        // shift + enter 예외처리
+        if (!event.shiftKey) {
+            event.preventDefault();
+            
+            const text = textarea.value;
+            localStorage.setItem(MEMO_LS, text);
+        }
+    }
+}
+```
+
 ---
 ### 추가하고 싶은 사항
 - Css로 디자인하기
