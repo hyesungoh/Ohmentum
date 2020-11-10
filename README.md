@@ -190,5 +190,5 @@ function handleTextSubmit(event){
 - 메모장 modal 추가하기
   - ~~modal 추가~~
   - ~~modal transition 사용~~
-  - textarea 값 LS 저장하기
+  - ~~textarea 값 LS 저장하기~~
 - 배경화면 슬라이더 추가
