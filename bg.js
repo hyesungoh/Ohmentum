@@ -20,7 +20,6 @@ function slideBg() {
     currentBg.classList.remove(BG_SHOWING_CN);
     randomBg.classList.add(BG_SHOWING_CN);
   }
-  
 }
 
 // function paintImg(imgNumber){

@@ -173,22 +173,52 @@ function handleTextSubmit(event){
 }
 ```
 
+#### Slide Background
+- 기본 배경의 display를 none으로 설정 후 display 속성이 있는 클래스를 추가하는 방식으로 구현
+- 기존에 만들었던 `genRandom()` 함수를 이용하여 id 값을 찾음
+```js
+function slideBg() {
+  const currentBg = bg.querySelector(`.${BG_SHOWING_CN}`);
+
+  const randomNumber = genRandom();
+  const randomBg = bg.querySelector(`#bg_${randomNumber}`);
+  
+  if (currentBg === null){
+    randomBg.classList.add(BG_SHOWING_CN);
+  } else {
+    currentBg.classList.remove(BG_SHOWING_CN);
+    randomBg.classList.add(BG_SHOWING_CN);
+  }
+}
+
+function handleClick() {
+  slideBg();
+}
+
+function init(){
+  slideBg();
+  bg.addEventListener("click", handleClick);
+}
+
+init();
+```
+
 ---
 ### 추가하고 싶은 사항
-- Css로 디자인하기
+- ~~Css로 디자인하기~~
   - ~~시계~~
   - ~~이름 및 해당 Input~~
   - ~~할 일 및 해당 Input~~
   - ~~날씨~~
   - ~~할 일 hover~~
-- Animation을 활용해 조금이나마 자연스럽게 만들기
+- ~~Animation을 활용해 조금이나마 자연스럽게 만들기~~
   - ~~시계~~
   - 이름 입력시
   - ~~할 일 작성시~~
   - ~~할 일 삭제시~~
   - ~~날씨 로딩 후~~
-- 메모장 modal 추가하기
+- ~~메모장 modal 추가하기~~
   - ~~modal 추가~~
   - ~~modal transition 사용~~
   - ~~textarea 값 LS 저장하기~~
-- 배경화면 슬라이더 추가
+- ~~배경화면 슬라이더 추가~~
