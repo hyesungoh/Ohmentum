@@ -6,12 +6,25 @@ button {
     border-radius: 5px;
     cursor: pointer;
     display: inline-block;
+
+    z-index: 1;
 }
 
 .modal_button {
+    box-sizing: border-box;
     position: absolute;
-    margin-left: 90%;
-    margin-top: 50%;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+    padding: 20px;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    z-index: -1;
   }
 
 

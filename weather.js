@@ -34,6 +34,7 @@ function saveCoords(coordsObj){
 }
 
 function handleGeoSucces(position){
+  console.log(position);
   const latitude = position.coords.latitude;
   const longitude = position.coords.longitude;
   const coordsObj = {
@@ -53,13 +54,14 @@ function handleGeoError(){
 }
 
 function askForCoords(){
-  navigator.geolocation.getCurrentPosition(handleGeoSucces, handleGeoError);
+  navigator.geolocation.watchPosition(handleGeoSucces, handleGeoError, {timeout:10000});
+
+  // navigator.geolocation.getCurrentPosition(handleGeoSucces, handleGeoError);
 }
 
 
 function loadCoords(){
   const loadedCoords = localStorage.getItem(COORD_LS);
-
   if (loadedCoords === null){
     askForCoords();
   } else {
